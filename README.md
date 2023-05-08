@@ -19,7 +19,7 @@ A continuación, tendremos que coger todos los archivos de este repositorio meno
 
 Seguidamente hay una imagen que muestra el resultado esperado: 
 
-<img src="/docs/img_readme/A2.png" alt=""/>
+<img src="/docs/img_readme/A2.jpg" alt=""/>
 
 
 Paso 3: Acceder a phpMyadmin y preparar la estructura de la base de datos
