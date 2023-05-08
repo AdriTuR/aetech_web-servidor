@@ -28,7 +28,7 @@ Tras abrir la aplicación XAMPP hay que activar el Apache y el MySQL clicando el
 
 En la imagen siguiente se observa que en ese caso el numero de puerto es el 80 y que tiene activos el Apache y el MySQL: 
 
-<img src="/docs/img_readmee/A3.png" alt=""/>
+<img src="/docs/img_readme/A3.png" alt=""/>
 
 Una vez claro el numero de puerto y con todos los campos mencionados activos, hay que ir a un servidor e insertar una búsqueda con la siguiente estructura: localhost:80
 pero cambiando el 80 por el número de puerto correspondiente.
