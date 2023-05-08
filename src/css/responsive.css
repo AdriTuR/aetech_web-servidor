@@ -1,0 +1,147 @@
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*                                              CSS - responsive.css                                                 */
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------MEDIANO--------------------------------------------------------*/
+@media (max-width: 1140px) {
+/*-----------------------------------------------------------*/
+/*-------------------------TEXTOS----------------------------*/
+    h1{
+        font-size: 2rem;
+        margin: 5% 0 2% !important;
+    }
+    h2{
+        font-size: 1.7rem !important;
+    }
+    h3{
+        font-size: 1.5rem !important;
+    }
+    h4{
+        font-size: 1rem !important;
+    }
+    p{
+        font-size: 1rem !important;
+    }
+/*-----------------------------------------------------------*/
+/*-------------------------PANELES---------------------------*/
+    .panel-flip{
+        height: 400px;
+    }
+    .texto_paneles{
+        margin: 50% 20px;
+    }
+    .iconos {
+        margin-top: 5rem;
+    }
+/*-----------------------------------------------------------*/
+/*-------------------------BOTONES---------------------------*/
+    .botones{
+        font-size: 0.8rem;
+    }
+    #boton_ir_arriba, #boton_abajo{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+/*-----------------------------------------------------------*/
+/*-------------------------ALERTAS---------------------------*/
+    #alerta_login {
+        font-size: 0.8rem;
+        width: 100%;
+        margin: 0 !important;
+    }
+/*-----------------------------------------------------------*/
+/*-------------LANDING PAGE  & ACERCA AETECH-----------------*/
+    .seccion_landing_inicio, .seccion_acerca_inicio {
+        display: block !important;
+        padding: 1% 10% 15%;
+    }
+    .div_landing_texto1, .div_acerca_texto1{
+        margin: 1rem!important;
+    }
+    .div_landing_imagen_robot, .div_acerca_imagen_logo {
+        justify-content: center;
+    }
+    .imagen_robot{
+        height: 20rem;
+    }
+    .texto_fun_web{
+        font-size: 0.8rem;
+    }
+    .imagen_logo_aetech {
+        height: 150px;
+        margin: 15px !important;
+    }
+/*-----------------------------------------------------------*/
+/*--------------------------LOGIN----------------------------*/
+    .seccion_login {
+        padding: 0% 10% 10%;
+    }
+}
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------PEQUEÑO--------------------------------------------------------*/
+@media (max-width: 750px) {
+/*-----------------------------------------------------------*/
+/*--------------------------MENU-----------------------------*/
+    .div_menu_secundario{
+        display: flex !important;
+    }
+    #boton_iniciar_sesion{
+        display: none;
+    }
+    .menu{
+        display: none;
+    }
+    .logo_aetech_landing {
+        width: 8em;
+        margin-inline-start: 0;
+    }
+    .paneles{
+        display: block !important;
+    }
+    .texto_paneles {
+        margin: 30% 10%;
+        font-size: 1.1rem !important;
+    }
+    ul{
+        display: block !important;
+    }
+    .div_landing_fun_web{
+        display: block !important;
+        margin: 0;
+    }
+    .div_listado_fun_web{
+        display: block!important;
+        margin: 0 ;
+    }section{
+        padding: 1rem;
+    }
+    h1{
+        font-size: 1.3rem;
+    }
+    p{
+        font-size: 0.8rem!important;
+    }
+    .imagen_robot{
+        height: 18rem;
+    }
+    .div_landing_fun_web{
+        padding: 5% 10% 4%;
+    }
+    .div_landing_fun_web p{
+        padding: 5% 0 !important;
+    }
+    .panel-flip{
+        height: 380px;
+        width: 90%;
+        margin: 20px !important;
+    }
+    .div_formulario_login {
+        margin: 3rem 0rem 1.5rem 0rem!important;
+    }
+    .imagen_logo_aetech {
+        height: 125px;
+    }
+}

@@ -1,0 +1,453 @@
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*                                                  CSS - all.cs                                                     */
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------VARIABLES-------------------------------------------------------*/
+:root {
+    --color_principal: #65dd73;
+    --color_secundario: #4b8e53;
+    --color_terciario: #a4ecac;
+    --color_boton: #96D79D;
+    --color_boton_hover: #4e924b;
+    --color_blanco: #fafafa;
+    --color_negro: #333333;
+    --color_gris: #bdbdbd;
+    --fuente_texto: "Titillium Web";
+}
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------GENERAL--------------------------------------------------------*/
+
+/*-----------------------------------------------------------------*/
+/*------------------------------TEXTO------------------------------*/
+a:-webkit-any-link{
+    text-decoration: none;
+}
+body{
+    font-family: var(--fuente_texto);
+}
+p{
+    color: var(--color_negro);
+    font-size: 1.2rem;
+    text-align: center;
+}
+.texto_verde{
+    color: var(--color_principal);
+}
+.texto_blanco{
+    color: var(--color_blanco);
+}
+/*-----------------------------------------------------------------*/
+/*-----------------------------TITULO------------------------------*/
+h1, h2, h3{
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+/*-----------------------------------------------------------------*/
+/*------------------------------ICONOS-----------------------------*/
+.iconos{
+    margin-top: 30%;
+    animation: flotar_animacion 3s ease-in-out infinite;
+}
+.iconos_fun_web{
+    width: 65px;
+    height: 65px;
+    margin-right: 15px;
+}
+.iconos_login{
+    color: var(--color_principal);
+    font-size: 1.5rem !important;
+    margin-right: 20px !important;
+}
+.icono_menu{
+    color: var(--color_boton);
+    font-size: 2.5rem !important;
+}
+
+/*-----------------------------------------------------------------*/
+/*------------------------------PARTES-----------------------------*/
+section{
+    padding: 3rem;
+}
+/*-----------------------------------------------------------------*/
+/*-----------------------------LISTAS------------------------------*/
+ul{
+    list-style: none;
+    padding: 0px;
+}
+/*-----------------------------------------------------------------*/
+/*-----------------------------INPUTS------------------------------*/
+.container_input{
+    margin: 20px 0 40px;
+}
+.input_login{
+    border: 2px solid var(--color_principal);
+    border-radius: 4px;
+    font-size: 0.8rem;
+    padding: 20px;
+}
+.input_login:focus {
+    outline: none !important;
+    border:3px solid var(--color_secundario);
+    box-shadow: 0 0 10px var(--color_terciario);
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
+/*-----------------------------------------------------------------*/
+/*------------------------------PANELES----------------------------*/
+.panel-flip {
+    position: relative;
+    height: 450px;
+    width: 400px;
+    text-align: center;
+    transition: transform 0.3s;
+    transform-style: preserve-3d;
+}
+.panel{
+    text-align: center;
+}
+.titulo_panel{
+    margin-top: 2.5rem;
+    font-weight: bold;
+    animation: flotar_animacion 3s ease-in-out infinite;
+}
+.texto_paneles{
+    font-size: 1.2rem;
+    margin: 40% 20px;
+}
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.panel-flip:hover {
+    transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+.flip-card-front {
+    border: 4px solid var(--color_blanco);
+    background: var(--color_blanco) ;
+    border-radius: 20px;
+}
+.flip-card-back {
+    border: 1px solid var(--color_negro);
+    background: var(--color_negro) ;
+    border-radius: 20px;
+    transform: rotateY(180deg);
+}
+/*-----------------------------------------------------------------*/
+/*---------------------------MODALS--------------------------------*/
+.modal-header{
+    border-bottom: none;
+    display: block;
+}
+.close{
+    margin: 0;
+    padding: 0;
+}
+/*-----------------------------------------------------------------*/
+/*-----------------------------BOTONES-----------------------------*/
+button{
+    cursor: pointer;
+}
+.botones{
+    background-color: var(--color_boton);
+    border: none;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, .1) 0 5px 4px;
+    box-sizing: border-box;
+    color: var(--color_blanco);
+    outline: 0;
+    padding: 10px 25px;
+    text-align: center;
+    margin: 20px 0;
+    width: 150px;
+}
+.botones:hover {
+    background-color: var(--color_boton_hover);
+}
+#boton_iniciar_sesion_secundario i:hover, #boton_menu_secundario i:hover{
+    color: var(--color_boton_hover);
+}
+#boton_iniciar_sesion_secundario, #boton_menu_secundario{
+    border: none;
+    background: none;
+    padding: 0;
+    width: 45px;
+    height: 45px;
+    margin: 0 5px;
+}
+/*-----------------------------------------------------------------*/
+/*---------------------BOTONES ARRIBA-ABAJO------------------------*/
+.fa-angle-down{
+    animation: flecha-animada 2s ease-in-out infinite;
+}
+.fa-angle-up{
+    animation: flecha-animada 2s ease-in-out infinite;
+}
+#boton_ir_arriba{
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    z-index: 99;
+    background-color: var(--color_blanco);
+    border: none;
+    outline: none;
+    color: var(--color_principal);
+    cursor: pointer;
+    padding: 0px 20px;
+    border-radius: 50px;
+    font-size: 3rem;
+}
+#boton_abajo{
+    position: fixed;
+    bottom: 40px;
+    z-index: 99;
+    background-color: var(--color_blanco);
+    border: none;
+    outline: none;
+    color: var(--color_principal);
+    cursor: pointer;
+    padding: 0px 20px;
+    border-radius: 50px;
+    font-size: 3rem;
+}
+/*-------------------------------------------------------*/
+/*---------------------ANIMACIONES-----------------------*/
+@keyframes flecha-animada {
+    from{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    50%{
+        transform: translateY(8px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes flotar_animacion {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-20px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+@keyframes tada {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+    10%, 20% {
+        transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    }
+    30%, 50%, 70%, 90% {
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+    40%, 60%, 80% {
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------HEADER--------------------------------------------------------*/
+.encabezado{
+    padding: 1.2rem;
+    background: var(--color_blanco);
+}
+/*-----------------------------------------------------------------*/
+/*--------------------------LOGO AETECH----------------------------*/
+.logo_aetech_landing{
+    width: 10em;
+    margin-inline-start: 10%;
+}
+/*-----------------------------------------------------------------*/
+/*-----------------------------MENU--------------------------------*/
+.menu_elementos{
+    padding: 0;
+    margin: 0;
+}
+.menu_opcion{
+    color: var(--color_gris);
+    font-size: 1.1rem;
+}
+.menu_opcion:hover{
+    color: var(--color_terciario);
+}
+.menu_opcion_activado{
+    color: var(--color_principal);
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.menu_opcion_activado:hover{
+    color: var(--color_principal);
+    font-weight: bold;
+}
+.menu_secundario{
+    background: var(--color_boton);
+    border: 2px solid var(--color_blanco);
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+}
+.menu_secundario_opcion{
+    color: var(--color_blanco);
+    font-size: 1.1rem;
+    border-bottom: 2px solid
+}
+.menu_secundario_opcion:hover{
+    background: var(--color_boton_hover);
+}
+/*-----------------------------------------------------------------*/
+/*-------------------------MENU SECUNDARIO-------------------------*/
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------FOOTER-------------------------------------------------------*/
+footer{
+    background: var(--color_negro);
+    padding: 2% 5%;
+}
+
+.texto_footer{
+    font-size: 0.8rem;
+    margin-bottom: 0;
+}
+.icono_footer{
+    color: var(--color_blanco);
+    margin: 0.5rem;
+}
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*                                                   LANDING PAGE                                                    */
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------SECCIÓN 1------------------------------------------------------*/
+.seccion_landing_inicio{
+    background: var(--color_blanco);
+    padding: 5% 10% 10%;
+}
+.div_landing_imagen_robot{
+    display: flex;
+    align-items: center;
+}
+.imagen_robot{
+    height: 25rem;
+    animation: flotar_animacion 2s ease-in-out infinite;
+}
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------SECCIÓN 2------------------------------------------------------*/
+.seccion_landing_fun_robot{
+    background: var(--color_secundario);
+    padding: 5% 10px;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------SECCIÓN 3------------------------------------------------------*/
+.seccion_landing_fun_web{
+    background: var(--color_blanco);
+}
+.div_landing_fun_web{
+    padding: 0 10% 4%;
+}
+.div_listado_fun_web{
+    margin: 0 10% 5%;
+}
+.div_listado_fun_web ul li{
+    margin: 0 5%;
+}
+.texto_fun_web{
+    font-size: 1rem;
+}
+.imagen_fun_web{
+    animation: flotar_animacion 2s ease-in-out infinite;
+}
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*                                                  ACERCA DE NOSOTROS                                               */
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------SECCIÓN 1------------------------------------------------------*/
+.seccion_acerca_inicio{
+    background: var(--color_blanco);
+    padding: 5% 10% 15%;
+}
+
+.div_acerca_imagen_logo{
+    display: flex;
+    align-items: center;
+}
+
+.imagen_logo_aetech{
+    height: 200px;
+    animation: flotar_animacion 2s ease-in-out infinite;
+}
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------SECCIÓN 3------------------------------------------------------*/
+.seccion_acerca_rasgos{
+    background: var(--color_secundario);
+    padding: 5% 10px;
+}
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*                                                     LOGIN                                                         */
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------*/
+.seccion_login{
+    background: var(--color_blanco);
+    padding: 2% 10% 10%;
+}
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------FORMULARIO LOGIN----------------------------------------------------*/
+.formulario_login{
+    margin-top: 40px;
+}
+.div_formulario_login{
+    margin: 3rem 3rem 1.5rem 3rem!important
+}
+.boton_contra_olvidada{
+    background: none;
+    border: none;
+}
+.boton_contra_olvidada:hover{
+    font-size: 1rem;
+    font-weight: bold;
+}
+#alerta_login{
+    display: none;
+    animation: tada 0.5s ease-in-out;
+}
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------*/
