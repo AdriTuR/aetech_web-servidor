@@ -19,7 +19,7 @@ A continuación, tendremos que coger todos los archivos de este repositorio meno
 
 Seguidamente hay una imagen que muestra el resultado esperado: 
 
-<img src="/docs/img_readme/W1.png" alt=""/>
+<img src="/docs/img_readme/A2.png" alt=""/>
 
 
 Paso 3: Acceder a phpMyadmin y preparar la estructura de la base de datos
@@ -28,7 +28,7 @@ Tras abrir la aplicación XAMPP hay que activar el Apache y el MySQL clicando el
 
 En la imagen siguiente se observa que en ese caso el numero de puerto es el 80 y que tiene activos el Apache y el MySQL: 
 
-<img src="/docs/_imgReadme/A3.png" alt=""/>
+<img src="/docs/img_readmee/A3.png" alt=""/>
 
 Una vez claro el numero de puerto y con todos los campos mencionados activos, hay que ir a un servidor e insertar una búsqueda con la siguiente estructura: localhost:80
 pero cambiando el 80 por el número de puerto correspondiente.
@@ -36,7 +36,7 @@ pero cambiando el 80 por el número de puerto correspondiente.
 Si todo ha ido bien habrá una página web con el icono de Xampp bien visible. En esta página se podrá encontrar en la parte superior derecha un botón llamado phpMyAdmin. Hay que pulsarlo.
 
 Una vez clicado estaremos dentro de phpMyAdmin, aquí, habrá que crear una base de datos con el nombre "": 
-<img src="/docs/_imgReadme/A4.png" alt=""/>
+<img src="/docs/img_readme/A4.png" alt=""/>
 
 
 Paso 4: Acceder a la web y ver que todo funciona bien:
@@ -47,6 +47,6 @@ localhost/src/index.php o como se llame la carpeta y la ruta.
 donde src es el nombre de nuestra carpeta  (en caso de haber puesto otro nombre hay que sustituir el nombre src por el nombre asignado).
 
 Si la dirección es correcta debería aparecer una web similar a la siguiente:
-<img src="/docs/img_readme/W1.png" alt=""/>
+<img src="/docs/img_readme/W1.jpg" alt=""/>
 
 Para acceder al panel del usuario los datos son: -"Usuario" -"12345"  
