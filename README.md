@@ -35,8 +35,8 @@ pero cambiando el 80 por el número de puerto correspondiente.
 
 Si todo ha ido bien habrá una página web con el icono de Xampp bien visible. En esta página se podrá encontrar en la parte superior derecha un botón llamado phpMyAdmin. Hay que pulsarlo.
 
-Una vez clicado estaremos dentro de phpMyAdmin, aquí, habrá que crear una base de datos con el nombre "": 
-<img src="/docs/img_readme/A4.png" alt=""/>
+Una vez clicado estaremos dentro de phpMyAdmin, aquí, habrá que crear una base de datos con el nombre "robotica_23" , y dentro de esta hay que hacer tres tablas con las siguientes estructuras:  
+<img src="/docs/img_readme/BBDD.png" alt=""/>
 
 
 Paso 4: Acceder a la web y ver que todo funciona bien:
