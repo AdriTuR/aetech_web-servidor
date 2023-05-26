@@ -55,14 +55,14 @@
             <!--------------------------------------------------->
             <!----------------- Form Login ---------------------->
             <div class="div_formulario_login justify-content-center">
-                <form class="formulario_login" id="formulario_login">
+                <form class="formulario_login" id="formulario_login" action="Servidor/ComprobarCredenciales.php" method="post">
                     <div class="container_input d-flex">
                         <i class="fa fa-user iconos_login m-2"></i>
-                        <input id="usuario" type="text" class="form-control input_login" placeholder="Usuario" required>
+                        <input id="correo" type="text" class="form-control input_login" placeholder="Usuario" name="correo" required>
                     </div>
                     <div class="container_input d-flex">
                         <i class="fa fa-lock iconos_login m-2"></i>
-                        <input id="contrasenya" type="password" class="form-control input_login" placeholder="Contraseña" required>
+                        <input id="contrasenya" type="password" class="form-control input_login" placeholder="Contraseña" name="contrasenya" required>
                     </div>
             <!--------------------------------------------------->
             <!----------------- Boton Login --------------------->
@@ -109,7 +109,7 @@
 <!---------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------->
     </body>
-    <script src="../src/js/login.js"></script>
+<!--  <script src="../src/js/login.js"></script>-->
 <!---------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------->
 </html>

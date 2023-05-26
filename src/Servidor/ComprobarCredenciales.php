@@ -1,5 +1,5 @@
 <?php
-include './LogicaDelNegocio.php';
+include 'LogicaDelNegocio.php';
 session_start();
 
 
@@ -13,19 +13,19 @@ if($metodo=='POST') {
         $correo = $_POST['correo'];
         $contrasenya = $_POST["contrasenya"];
         //llamada a la funcion de la lógica de negocio
-        if(comprobarCredenciales($_POST['correo'], $contrasenya)){
+        if(comprobarCredenciales($correo, $contrasenya)){
             session_start();
             $_SESSION['usuario'] = $correo;
-            header("location: ../src/_panel_robot.php");
+            header("location: ../panel_robot.php");
             exit();
         }else{
             echo "Error en la peticion";
-            header("location: ../ux/index.php");
+            header("location: ../login.php");
             exit();
         }
     } else {
         echo "Error en la peticion GET. Parámetros incorrectos.";
-        header("location: ../ux/index.php");
+        header("location: ../login.php");
         exit();
     }
 }else{

@@ -26,7 +26,7 @@
                     <form class="formulario_recuperar_contra" id="formulario_recuperar_contra">
                         <div class="container_input d-flex">
                             <i class="fa fa-envelope iconos_login m-2"></i>
-                            <input id="correo" type="email" class="form-control input_login" placeholder="Correo" required>
+                            <input id="correo_recuperar" type="email" class="form-control input_login" placeholder="Correo" required>
                         </div>
             <!--------------------------------------------------->
             <!----------------- Boton Enviar -------------------->
