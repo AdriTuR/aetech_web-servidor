@@ -73,3 +73,33 @@ function obtenerDatosUsuario($correo)
         return $exception;
     }
 }
+
+//------------------------------------------------------------------------------------------//
+//----------------------------- obtenerPuestosTrabajo() ------------------------------------//
+function obtenerPuestosTrabajo($idUsuario)
+{
+    try{
+        $datosUsuario = obtenerPuestosTrabajoBBDD($idUsuario);
+        $resultadoDatos = array();
+        $i = 0;
+
+        while ($fila = mysqli_fetch_array($datosUsuario)) {
+            $respuesta["nombrePuesto"] = $fila["nombrePuesto"];
+            $respuesta["coordenadaX"] = $fila ["coordenadaX"];
+            $respuesta["coordenadaY"] = $fila ["coordenadaY"];
+            $respuesta["idPuestoTrabajo"] = $fila ["idPuestoTrabajo"];
+
+
+            $resultadoDatos[$i] = $respuesta;
+            $i++;
+        }
+
+        return json_encode($resultadoDatos);
+
+    }catch (mysqli_sql_exception $exception){
+        return $exception;
+    }
+}
+
+
+

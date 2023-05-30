@@ -453,7 +453,12 @@ session_start()
                         <input name="goal_y" type="text" placeholder="pos y" id="goal_y">
                     </div>
                     <button id="btn_goto">Go</button>
+                    <?php
+                    include './servidor/MostrarPuestos.php';
+                    mostrarPuestos();
+                    ?>
                 </div>
+
             </div>
             <div class="contenedor__leyenda">
                 <div class="marco_leyenda">
@@ -605,8 +610,10 @@ session_start()
         <hr>
         <p id="copiright">© 2023 Aetech. Todos los derechos reservados.</p>
     </div>
+    <button onClick="getIdBotonPuesto(this.id)">Boton</button>
 </footer>
 
 <script src="assets/js/script_usuario.js"></script>
+
 </body>
 </html>

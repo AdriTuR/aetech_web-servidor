@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', event => {
 
     // btn_move = document.getElementById("btn_move").addEventListener("click", move)
     btn_goto = document.getElementById("btn_goto")
+    btn_goto = document.getElementById("btn_goto")
 
     btn_goto.addEventListener("click", () => {
         var x = document.getElementById("goal_x").value;
@@ -181,7 +182,8 @@ document.addEventListener('DOMContentLoaded', event => {
         let message = new ROSLIB.Message(myPose)
         topic.publish(message)
     }
- 
+
 
 
 });
+
