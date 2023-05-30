@@ -1,18 +1,5 @@
 <?php
-
-     session_start();
-     /*
-    if (!isset($_SESSION['usuario'])){
-        echo '
-            <script>
-                alert("Inicia sesión y no me seas perro");
-                window.location = "../ux/index.php";
-            </script>
-        ';
-        session_destroy();
-        die();
-    }
-     */
+session_start()
 ?>
 
 <!DOCTYPE html>
@@ -29,11 +16,11 @@
 
     <!-- ROS2 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/roslibjs/1.1.0/roslib.min.js"
-        integrity="sha512-x2Owc9WayRcRj80Znkau58shVfXN2OIX+gQAlrx6KPugZBKrIC6AwgEWQQCI06p2Q8RB4ilxD+y+1BdNd+1fQA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            integrity="sha512-x2Owc9WayRcRj80Znkau58shVfXN2OIX+gQAlrx6KPugZBKrIC6AwgEWQQCI06p2Q8RB4ilxD+y+1BdNd+1fQA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/EaselJS/1.0.2/easeljs.min.js"
-        integrity="sha512-LFVrDRb8AtfnlgyB/CDam6ESv7P88EdiUApUYYOv8T7/RT5M05ogumlzPegCPqHk/SqeBjW/0F/FbbyBenCkKg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            integrity="sha512-LFVrDRb8AtfnlgyB/CDam6ESv7P88EdiUApUYYOv8T7/RT5M05ogumlzPegCPqHk/SqeBjW/0F/FbbyBenCkKg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script src=" https://cdn.jsdelivr.net/npm/eventemitter2@6.4.9/lib/eventemitter2.min.js "></script>
     <script src="https://cdn.jsdelivr.net/npm/ros2d@0.10.0/build/ros2d.min.js"></script>
@@ -41,7 +28,7 @@
     <script src="assets/js/draw_occupancy_grid.js"></script>
     <script src="assets/js/ros2main.js"></script>
     <!-- END ROS2 -->
-    
+
     <!--  <link rel="stylesheet" type="text/css" href="librerias/bootstrap/css/bootstrap.css"> -->
     <script src="http://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
 
@@ -91,8 +78,17 @@
                 <div class="btn_empleados">Ver Incidencias</div>
                 <div class="btn_empleados" style="color: #65dd73;">+ Nuevo Empleado</div>
             </div>
-
-            <div class="tarjeta_empleado">
+            <div class="listado_empleados">
+                <table>
+                    <tbody id="contenido_listado_empleados">
+                        <?php
+                        include './servidor/completarTabla.php';
+                        completarTabla();
+                        ?>
+                    </tbody>
+                </table>
+            </div>
+            <!--<div class="tarjeta_empleado">
                 <div class="img__empleado">
                     <img src="assets/images/pi4.png" class="icono_perfil">
                 </div>
@@ -175,7 +171,7 @@
                     <div style="flex: 1">
                         <img src="assets/iconos/gear-solid.svg" class="ico__engranaje" style="margin-right: 16px;flex: 1">
                     </div>
-                </div>
+                </div>-->
         </div>
 
         <div class="pestanya_calendario">
@@ -448,14 +444,14 @@
                         <button id="btn_dis" style="background-color: red">Disconnect</button>
                     </div>
                     <h5 >Move robot to: </h5>
-                    <div>                        
+                    <div>
                         <label for="goal_x">X</label>
                         <input name="goal_x" type="text" placeholder="pos x" id="goal_x">
                     </div>
                     <div>
                         <label for="goal_y">Y</label>
                         <input name="goal_y" type="text" placeholder="pos y" id="goal_y">
-                    </div>             
+                    </div>
                     <button id="btn_goto">Go</button>
                 </div>
             </div>

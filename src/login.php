@@ -55,10 +55,10 @@
             <!--------------------------------------------------->
             <!----------------- Form Login ---------------------->
             <div class="div_formulario_login justify-content-center">
-                <form class="formulario_login" id="formulario_login" action="Servidor/ComprobarCredenciales.php" method="post">
+                <form class="formulario_login" id="formulario_login" action="servidor/ComprobarCredenciales.php" method="post">
                     <div class="container_input d-flex">
-                        <i class="fa fa-user iconos_login m-2"></i>
-                        <input id="correo" type="text" class="form-control input_login" placeholder="Usuario" name="correo" required>
+                        <i class="fa fa-envelope iconos_login m-2 icono_correo_login"></i>
+                        <input id="correo" type="email" class="form-control input_login" placeholder="Correo" name="correo" required>
                     </div>
                     <div class="container_input d-flex">
                         <i class="fa fa-lock iconos_login m-2"></i>
@@ -109,7 +109,6 @@
 <!---------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------->
     </body>
-<!--  <script src="../src/js/login.js"></script>-->
 <!---------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------->
 </html>
